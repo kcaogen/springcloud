@@ -1,0 +1,18 @@
+server:
+  port: 1112
+
+management:
+  security:
+    enabled: false
+
+spring:
+  application:
+    name: eureka-client
+
+eureka:
+  client:
+    serviceUrl:
+              defaultZone: http://localhost:1111/eureka/
+
+
+
