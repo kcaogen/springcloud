@@ -1,6 +1,6 @@
 # 端口设置
 server:
-  port: 1115
+  port: 0
 
 # 应用名称设置
 spring:
@@ -12,3 +12,5 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:1111/eureka/
+  instance:
+      instance-id: ${spring.application.name}:${random.int[10000,19999]}    # 随机数配置实例ID
