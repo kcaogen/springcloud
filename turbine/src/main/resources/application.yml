@@ -1,0 +1,18 @@
+server:
+  port: 8888
+
+# 服务应用名称
+spring:
+  application:
+    name: turbine
+
+# 注册中心地址
+eureka:
+  client:
+    serviceUrl:
+              defaultZone: http://localhost:1111/eureka/
+
+turbine:
+  app-config: ribbon-consumer   #收集监控信息的服务名
+  combine-host-port: true
+  cluster-name-expression: new String('default')    #集群名称
