@@ -31,3 +31,11 @@ Spring Cloud Eureka是Spring Cloud Netflix微服务套件中的一部分，它�
 ### [SpringCloud(三):断路器Hystrix](https://www.kcaogen.com/blog/info/22)
 
 在微服务架构中，我们将系统拆分成了很多服务单元，各单元的应用间通过服务注册与订阅的方式相互依赖。由于每个单元都在不同的进程中运行，依赖通过远程调用的方式执行，这样就有可能因为网络原因或者依赖服务自身的问题导致调用故障或延迟，而调用失败又会造成用户刷新页面并再次尝试调用，再加上其它服务调用，从而增加了服务器的负载，导致服务瘫痪，最终甚至会导致整个服务“雪崩”。
+
+### [SpringCloud(四):Hystrix仪表板](https://www.kcaogen.com/blog/info/23)
+
+Spring Cloud完美地整合了Hystrix的仪表板组件Hystrix Dashboard,它主要用来实时监控Hystrix的各项指标信息。通过Hystrix Dashboard反馈的实时信息，可以帮助我们快速发现系统中存在的问题，从而及时地采取应对措施。
+
+### [SpringCloud(五):Turbine集群监控](https://www.kcaogen.com/blog/info/24)
+
+看单个的Hystrix Dashboard的数据并没有什么多大的价值，要想看这个系统的Hystrix Dashboard数据就需要用到Hystrix Turbine。Hystrix Turbine将每个服务Hystrix Dashboard数据进行了整合。Hystrix Turbine的使用非常简单，只需要引入相应的依赖和加上注解和配置就可以了。
