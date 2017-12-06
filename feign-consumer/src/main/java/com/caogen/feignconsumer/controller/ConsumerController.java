@@ -2,6 +2,7 @@ package com.caogen.feignconsumer.controller;
 
 import com.caogen.feignconsumer.entity.User;
 import com.caogen.feignconsumer.service.ConsumerService;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 

@@ -14,3 +14,9 @@ eureka:
       defaultZone: http://localhost:1111/eureka/
   instance:
       instance-id: ${spring.application.name}:${random.int[10000,19999]}    # 随机数配置实例ID
+
+#开启hystrix(要不然降级失败)
+feign:
+  hystrix:
+    enabled: true
+

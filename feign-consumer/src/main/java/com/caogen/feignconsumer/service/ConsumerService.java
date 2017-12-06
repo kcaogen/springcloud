@@ -19,4 +19,7 @@ public interface ConsumerService {
     @RequestMapping(value = "/hello3", method = {RequestMethod.POST})
     String hello(@RequestBody User user);
 
+
+
+
 }
