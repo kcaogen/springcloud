@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 @FeignClient(name = "eureka-client", fallback = ConsumerServiceFallback.class)   //通过@FeignClient注解指定服务名来绑定服务
 public interface ConsumerService {
 
-    @RequestMapping(value = "/hello", method = {RequestMethod.GET})   //绑定方法
+    @RequestMapping(value = "/hello", method = {RequestMethod.GET})   //绑定REAT接口
     String hello();
 
     @RequestMapping(value = "/hello1", method = {RequestMethod.GET})
