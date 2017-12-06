@@ -1,0 +1,16 @@
+# 端口设置
+server:
+  port: 0
+
+# 应用名称设置
+spring:
+  application:
+    name: feign-consumer
+
+# 注册中心地址
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+  instance:
+      instance-id: ${spring.application.name}:${random.int[10000,19999]}    # 随机数配置实例ID
