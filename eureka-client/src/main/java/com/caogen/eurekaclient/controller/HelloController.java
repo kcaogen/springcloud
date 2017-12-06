@@ -1,11 +1,11 @@
 package com.caogen.eurekaclient.controller;
 
+import com.caogen.eurekaclient.entity.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.Random;
@@ -34,6 +34,21 @@ public class HelloController {
         }
 
         return "Hello,World! port:" + instance.getPort();
+    }
+
+    @GetMapping(value = "/hello1")
+    public String hello(@RequestParam String name) {
+        return "Hello " + name;
+    }
+
+    @GetMapping(value = "/hello2")
+    public User hello(@RequestHeader String name, @RequestHeader Integer age) {
+        return new User(name, age);
+    }
+
+    @PostMapping(value = "/hello3")
+    public String hello(@RequestBody User user) {
+        return "Hello " + user.getName() + ", age " + user.getAge();
     }
 
 }
