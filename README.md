@@ -39,3 +39,15 @@ Spring Cloud完美地整合了Hystrix的仪表板组件Hystrix Dashboard,它主�
 ### [SpringCloud(五):Turbine集群监控](https://www.kcaogen.com/blog/info/24)
 
 看单个的Hystrix Dashboard的数据并没有什么多大的价值，要想看这个系统的Hystrix Dashboard数据就需要用到Hystrix Turbine。Hystrix Turbine将每个服务Hystrix Dashboard数据进行了整合。Hystrix Turbine的使用非常简单，只需要引入相应的依赖和加上注解和配置就可以了。
+
+### [SpringCloud(六):服务消费者Feign 上](https://www.kcaogen.com/blog/info/25)
+
+Spring Cloud Feign无参数绑定服务调用
+
+### [SpringCloud(七):服务消费者Feign 中](https://www.kcaogen.com/blog/info/26)
+
+Spring Cloud Feign有参数绑定服务调用
+
+### [SpringCloud(八):服务消费者Feign 下](https://www.kcaogen.com/blog/info/27)
+
+Hystrix提供的服务降级是服务容错的重要功能，由于Spring Cloud Feign在定义服务客户端的时候与Spring Cloud Ribbon有很大的差别，HystrixCommand定义被封装了起来，博客讲解Spring Cloud Feign的降级处理。
