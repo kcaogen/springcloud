@@ -1,0 +1,31 @@
+server:
+  port: 5555
+spring:
+  application:
+    name: service-zuul
+
+# 关闭安全限制
+management:
+  security:
+    enabled: false
+
+# 路由配置
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: eureka-client
+    api-b:
+      path: /api-b/**
+      serviceId: feign-consumer
+
+# 注册中心地址
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+
+# 配置超时时间断路器才有效果（加入Zuul）
+ribbon:
+  ReadTimeout: 30000
+  ConnectTimeout: 30000
