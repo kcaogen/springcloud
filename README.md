@@ -51,3 +51,7 @@ Spring Cloud Feign有参数绑定服务调用
 ### [SpringCloud(八):服务消费者Feign 下](https://www.kcaogen.com/blog/info/27)
 
 Hystrix提供的服务降级是服务容错的重要功能，由于Spring Cloud Feign在定义服务客户端的时候与Spring Cloud Ribbon有很大的差别，HystrixCommand定义被封装了起来，博客讲解Spring Cloud Feign的降级处理。
+
+### [SpringCloud(九):API网关服务Zuul](https://www.kcaogen.com/blog/info/28)
+
+Spring Cloud Zuul 通过与 Spring Cloud Eureka 进行整合，将自身注册到 Eureka Server中，与Eureka,Ribbon,Hystrix等整合，同时从 Eureka 中获得了所有其它微服务的实例信息。这样的设计通过把网关和服务治理整合到一起，Spring Cloud Zuul可以获取到服务注册信息，结合Ribbon，Hystrix等更好的实现路由转发，负载均衡等功能。
