@@ -1,22 +1,21 @@
-# ¶Ë¿ÚÉèÖÃ
+# ç«¯å£è®¾ç½®
 server:
   port: 0
 
-# Ó¦ÓÃÃû³ÆÉèÖÃ
+# åº”ç”¨åç§°è®¾ç½®
 spring:
   application:
     name: feign-consumer
 
-# ×¢²áÖĞĞÄµØÖ·
+# æ³¨å†Œä¸­å¿ƒåœ°å€
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:1111/eureka/
   instance:
-      instance-id: ${spring.application.name}:${random.int[10000,19999]}    # Ëæ»úÊıÅäÖÃÊµÀıID
+      instance-id: ${spring.application.name}:${random.int[10000,19999]}    # éšæœºæ•°é…ç½®å®ä¾‹ID
 
-#¿ªÆôhystrix(Òª²»È»½µ¼¶Ê§°Ü)
+#å¼€å¯hystrix(è¦ä¸ç„¶é™çº§å¤±è´¥)
 feign:
   hystrix:
     enabled: true
-
