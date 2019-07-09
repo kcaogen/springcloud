@@ -20,38 +20,38 @@ Spring Cloud专注于提供良好的开箱即用经验的典型用例和可扩�
 
 - 分布式消息传递
 
-### [SpringCloud(一):服务注册中心Eureka](https://www.kcaogen.com/blog/info/20)
+### [SpringCloud(一):服务注册中心Eureka](https://kcaogen.com/archives/springcloudeureka)
 
 Spring Cloud Eureka是Spring Cloud Netflix微服务套件中的一部分，它基于Netflix Eureka做了二次封装，主要负责完成微服务架构中的服务治理功能。Spring Cloud通过为Eureka增加了Spring Boot风格的自动化配置，我们只需通过简单引入依赖和注解配置就能让Spring Boot构建的微服务应用轻松地与Eureka服务治理体系进行整合。
 
-### [SpringCloud(二):服务发现与消费](https://www.kcaogen.com/blog/info/21)
+### [SpringCloud(二):服务发现与消费](https://kcaogen.com/archives/springcloudserver)
 
 服务的发现和消费实际上是两个行为，这两个行为要由不同的对象来完成：服务的发现由Eureka客户端来完成，而服务的消费由Ribbon来完成。Ribbo是一个基于HTTP和TCP的客户端负载均衡器，当我们将Ribbon和Eureka一起使用时，Ribbon会从Eureka注册中心去获取服务端列表，然后进行轮询访问以到达负载均衡的作用，服务端是否在线这些问题则交由Eureka去维护。
 
-### [SpringCloud(三):断路器Hystrix](https://www.kcaogen.com/blog/info/22)
+### [SpringCloud(三):断路器Hystrix](https://kcaogen.com/archives/springcloudhystrix)
 
 在微服务架构中，我们将系统拆分成了很多服务单元，各单元的应用间通过服务注册与订阅的方式相互依赖。由于每个单元都在不同的进程中运行，依赖通过远程调用的方式执行，这样就有可能因为网络原因或者依赖服务自身的问题导致调用故障或延迟，而调用失败又会造成用户刷新页面并再次尝试调用，再加上其它服务调用，从而增加了服务器的负载，导致服务瘫痪，最终甚至会导致整个服务“雪崩”。
 
-### [SpringCloud(四):Hystrix仪表板](https://www.kcaogen.com/blog/info/23)
+### [SpringCloud(四):Hystrix仪表板](https://kcaogen.com/archives/hystrixdashboard)
 
 Spring Cloud完美地整合了Hystrix的仪表板组件Hystrix Dashboard,它主要用来实时监控Hystrix的各项指标信息。通过Hystrix Dashboard反馈的实时信息，可以帮助我们快速发现系统中存在的问题，从而及时地采取应对措施。
 
-### [SpringCloud(五):Turbine集群监控](https://www.kcaogen.com/blog/info/24)
+### [SpringCloud(五):Turbine集群监控](https://kcaogen.com/archives/springcloudturbine)
 
 看单个的Hystrix Dashboard的数据并没有什么多大的价值，要想看这个系统的Hystrix Dashboard数据就需要用到Hystrix Turbine。Hystrix Turbine将每个服务Hystrix Dashboard数据进行了整合。Hystrix Turbine的使用非常简单，只需要引入相应的依赖和加上注解和配置就可以了。
 
-### [SpringCloud(六):服务消费者Feign 上](https://www.kcaogen.com/blog/info/25)
+### [SpringCloud(六):服务消费者Feign 上](https://kcaogen.com/archives/springcloudfeign1)
 
 Spring Cloud Feign无参数绑定服务调用
 
-### [SpringCloud(七):服务消费者Feign 中](https://www.kcaogen.com/blog/info/26)
+### [SpringCloud(七):服务消费者Feign 中](https://kcaogen.com/archives/springcloudfeign2)
 
 Spring Cloud Feign有参数绑定服务调用
 
-### [SpringCloud(八):服务消费者Feign 下](https://www.kcaogen.com/blog/info/27)
+### [SpringCloud(八):服务消费者Feign 下](https://kcaogen.com/archives/springcloudfeign3)
 
 Hystrix提供的服务降级是服务容错的重要功能，由于Spring Cloud Feign在定义服务客户端的时候与Spring Cloud Ribbon有很大的差别，HystrixCommand定义被封装了起来，博客讲解Spring Cloud Feign的降级处理。
 
-### [SpringCloud(九):API网关服务Zuul](https://www.kcaogen.com/blog/info/28)
+### [SpringCloud(九):API网关服务Zuul](https://kcaogen.com/archives/springcloudzuul)
 
 Spring Cloud Zuul 通过与 Spring Cloud Eureka 进行整合，将自身注册到 Eureka Server中，与Eureka,Ribbon,Hystrix等整合，同时从 Eureka 中获得了所有其它微服务的实例信息。这样的设计通过把网关和服务治理整合到一起，Spring Cloud Zuul可以获取到服务注册信息，结合Ribbon，Hystrix等更好的实现路由转发，负载均衡等功能。
